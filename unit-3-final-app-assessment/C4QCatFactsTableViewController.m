@@ -85,25 +85,15 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    if ([segue.identifier isEqualToString:@"C4QCatFactsDetailViewController"]) {
-        
-        C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
-        
-        detailVC.catFact = self.catFacts[indexPath.row];
-    }
+    C4QCatFactsDetailViewController *detailVC  = [storyboard instantiateViewControllerWithIdentifier:@"C4QCatFactsDetailViewController"];
     
+    detailVC.catFact = self.catFacts[indexPath.row];
     
-    
-    
-    
-    
-    
-    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
-
 
 @end
