@@ -82,6 +82,8 @@
 
     cell.catFactLabel.text = self.catFacts[indexPath.row];
     
+    
+    
     return cell;
 }
 
