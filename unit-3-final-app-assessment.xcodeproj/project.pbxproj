@@ -10,6 +10,8 @@
 		6B47070C1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B47070B1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib */; };
 		6B47070F1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B47070E1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m */; };
 		6B4707121C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */; };
+		6B9A923F1C26182D00CDE272 /* UserSavedCatFactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9A923E1C26182D00CDE272 /* UserSavedCatFactTableViewCell.xib */; };
+		6B9A92421C26189E00CDE272 /* UserSavedCatFactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A92411C26189E00CDE272 /* UserSavedCatFactTableViewCell.m */; };
 		8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */; };
 		8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E971C2477EB00AADDC2 /* C4QColorPickerViewController.m */; };
 		8D610EA21C2477EB00AADDC2 /* C4QRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E991C2477EB00AADDC2 /* C4QRootViewController.m */; };
@@ -31,6 +33,9 @@
 		6B47070E1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactTableViewCell.m; sourceTree = "<group>"; };
 		6B4707101C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSavedCatFactsTableViewController.h; sourceTree = "<group>"; };
 		6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSavedCatFactsTableViewController.m; sourceTree = "<group>"; };
+		6B9A923E1C26182D00CDE272 /* UserSavedCatFactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSavedCatFactTableViewCell.xib; sourceTree = "<group>"; };
+		6B9A92401C26189E00CDE272 /* UserSavedCatFactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSavedCatFactTableViewCell.h; sourceTree = "<group>"; };
+		6B9A92411C26189E00CDE272 /* UserSavedCatFactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSavedCatFactTableViewCell.m; sourceTree = "<group>"; };
 		8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QCatFactsTableViewController.h; sourceTree = "<group>"; };
 		8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QColorPickerViewController.h; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 			children = (
 				8D8753061C24774700BBD328 /* AppDelegate.h */,
 				8D8753071C24774700BBD328 /* AppDelegate.m */,
+				6B9A923E1C26182D00CDE272 /* UserSavedCatFactTableViewCell.xib */,
+				6B9A92401C26189E00CDE272 /* UserSavedCatFactTableViewCell.h */,
+				6B9A92411C26189E00CDE272 /* UserSavedCatFactTableViewCell.m */,
 				6B4707101C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.h */,
 				6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */,
 				6B47070B1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib */,
@@ -200,6 +208,7 @@
 				6B47070C1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib in Resources */,
 				8D8753101C24774800BBD328 /* Assets.xcassets in Resources */,
 				8D87530E1C24774700BBD328 /* Main.storyboard in Resources */,
+				6B9A923F1C26182D00CDE272 /* UserSavedCatFactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8753081C24774700BBD328 /* AppDelegate.m in Sources */,
+				6B9A92421C26189E00CDE272 /* UserSavedCatFactTableViewCell.m in Sources */,
 				8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */,
 				8D8753051C24774700BBD328 /* main.m in Sources */,
 				8DA03F741C2499F400328B53 /* C4QCatFactsDetailViewController.m in Sources */,

@@ -29,8 +29,9 @@
     
     [self fetchCatFacts];
     
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
+
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     //grab the nib from the main bundle
     //register the nib for the cell identifier
@@ -81,8 +82,6 @@
     C4QCatFactTableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"CatFactIdentifier" forIndexPath:indexPath];
 
     cell.catFactLabel.text = self.catFacts[indexPath.row];
-    
-    
     
     return cell;
 }

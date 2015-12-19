@@ -7,6 +7,7 @@
 //
 
 #import "UserSavedCatFactsTableViewController.h"
+#import "UserSavedCatFactTableViewCell.h"
 
 #define SelectedCatFactsKey @"SelectedCatFacts"
 
@@ -25,6 +26,12 @@
     
     self.navigationItem.leftBarButtonItem.title = @"Done";
     self.navigationItem.title = @"Saved Cat Facts";
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"UserSavedCatFactTableViewCell" bundle:nil]
+         forCellReuseIdentifier:@"SavedCatFactIdentifier"];
 }
 
 #pragma mark - Table view data source
@@ -41,9 +48,9 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedCatFactIdentifier" forIndexPath:indexPath];
+    UserSavedCatFactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedCatFactIdentifier" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.savedCatFacts[indexPath.row];
+    cell.savedCatFactLabel.text = self.savedCatFacts[indexPath.row];
     
     return cell;
 }
