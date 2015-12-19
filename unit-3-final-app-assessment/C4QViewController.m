@@ -23,9 +23,14 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    C4QColorPickerViewController *vc = segue.destinationViewController;
+    if ([segue.destinationViewController isKindOfClass:[C4QColorPickerViewController class]]) {
+        
+        C4QColorPickerViewController *vc = segue.destinationViewController;
+        
+        vc.delegate = self;
+
+    }
     
-    vc.delegate = self;
 }
 
 @end
