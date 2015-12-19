@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B47070C1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B47070B1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib */; };
+		6B47070F1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B47070E1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m */; };
+		6B4707121C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */; };
 		8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */; };
 		8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E971C2477EB00AADDC2 /* C4QColorPickerViewController.m */; };
 		8D610EA21C2477EB00AADDC2 /* C4QRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E991C2477EB00AADDC2 /* C4QRootViewController.m */; };
@@ -23,6 +26,11 @@
 /* Begin PBXFileReference section */
 		4292FCC8B28330B5275CBFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4298908874A5133FD8BE086A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6B47070B1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = C4QCatFactTableViewCell.xib; sourceTree = "<group>"; };
+		6B47070D1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QCatFactTableViewCell.h; sourceTree = "<group>"; };
+		6B47070E1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactTableViewCell.m; sourceTree = "<group>"; };
+		6B4707101C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSavedCatFactsTableViewController.h; sourceTree = "<group>"; };
+		6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSavedCatFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QCatFactsTableViewController.h; sourceTree = "<group>"; };
 		8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QColorPickerViewController.h; sourceTree = "<group>"; };
@@ -96,6 +104,11 @@
 			children = (
 				8D8753061C24774700BBD328 /* AppDelegate.h */,
 				8D8753071C24774700BBD328 /* AppDelegate.m */,
+				6B4707101C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.h */,
+				6B4707111C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m */,
+				6B47070B1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib */,
+				6B47070D1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.h */,
+				6B47070E1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m */,
 				8D610E9C1C2477EB00AADDC2 /* C4QViewController.h */,
 				8D610E9D1C2477EB00AADDC2 /* C4QViewController.m */,
 				8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */,
@@ -184,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8753131C24774800BBD328 /* LaunchScreen.storyboard in Resources */,
+				6B47070C1C25E1A400B2AEE6 /* C4QCatFactTableViewCell.xib in Resources */,
 				8D8753101C24774800BBD328 /* Assets.xcassets in Resources */,
 				8D87530E1C24774700BBD328 /* Main.storyboard in Resources */,
 			);
@@ -249,8 +263,10 @@
 				8D8753051C24774700BBD328 /* main.m in Sources */,
 				8DA03F741C2499F400328B53 /* C4QCatFactsDetailViewController.m in Sources */,
 				8D610EA41C2477EB00AADDC2 /* C4QViewController.m in Sources */,
+				6B47070F1C25E2F400B2AEE6 /* C4QCatFactTableViewCell.m in Sources */,
 				8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */,
 				8D610EA21C2477EB00AADDC2 /* C4QRootViewController.m in Sources */,
+				6B4707121C25EA9200B2AEE6 /* UserSavedCatFactsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

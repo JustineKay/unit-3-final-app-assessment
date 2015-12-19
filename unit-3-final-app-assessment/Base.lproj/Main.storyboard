@@ -156,6 +156,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oZn-uB-LSS" kind="show" trigger="accessoryAction" id="sh4-bk-ehn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -163,11 +166,89 @@
                             <outlet property="delegate" destination="Q41-6z-oZL" id="DhZ-Vp-7N4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cat Facts" id="Wcl-Wy-q65"/>
+                    <navigationItem key="navigationItem" title="Cat Facts" id="Wcl-Wy-q65">
+                        <barButtonItem key="rightBarButtonItem" title="Saved" id="oHX-PY-leX">
+                            <connections>
+                                <segue destination="afA-dT-vvk" kind="show" id="cLe-IP-Ygy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yux-EA-lvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="677"/>
+        </scene>
+        <!--User Saved Cat Facts Table View Controller-->
+        <scene sceneID="ymg-xk-Nbj">
+            <objects>
+                <tableViewController id="afA-dT-vvk" customClass="UserSavedCatFactsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dJd-tf-JVS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hMX-bm-mqO">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMX-bm-mqO" id="Zul-p5-uOZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="afA-dT-vvk" id="Mjw-5t-g2J"/>
+                            <outlet property="delegate" destination="afA-dT-vvk" id="7C1-Dz-pPs"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4za-CV-uIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="335"/>
+        </scene>
+        <!--Cat Facts Detail View Controller-->
+        <scene sceneID="hTF-kn-Yvj">
+            <objects>
+                <viewController storyboardIdentifier="C4QCatFactsDetailViewController" id="oZn-uB-LSS" customClass="C4QCatFactsDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Al-ZI-2jc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y9k-IG-tYG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rQ9-ao-shT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGJ-ig-xs1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a4-oQ-TmX">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9k-IG-tYG" firstAttribute="top" secondItem="dGJ-ig-xs1" secondAttribute="bottom" id="0D7-T3-CBN"/>
+                            <constraint firstItem="5a4-oQ-TmX" firstAttribute="centerY" secondItem="rQ9-ao-shT" secondAttribute="centerY" id="HoD-K4-lAl"/>
+                            <constraint firstAttribute="trailing" secondItem="dGJ-ig-xs1" secondAttribute="trailing" id="gv4-PE-drQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5a4-oQ-TmX" secondAttribute="trailing" constant="20" id="lVh-fS-Evf"/>
+                            <constraint firstItem="5a4-oQ-TmX" firstAttribute="leading" secondItem="rQ9-ao-shT" secondAttribute="leading" constant="20" id="mek-gK-9cG"/>
+                            <constraint firstItem="dGJ-ig-xs1" firstAttribute="leading" secondItem="rQ9-ao-shT" secondAttribute="leading" id="nGL-nN-eur"/>
+                            <constraint firstItem="dGJ-ig-xs1" firstAttribute="top" secondItem="rQ9-ao-shT" secondAttribute="top" id="oPz-ZB-J2W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catFactLabel" destination="5a4-oQ-TmX" id="iWh-Qo-Cy7"/>
+                        <outlet property="giphyImageView" destination="dGJ-ig-xs1" id="5Dm-S1-eUp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqp-6K-kFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="1005"/>
         </scene>
     </scenes>
 </document>
