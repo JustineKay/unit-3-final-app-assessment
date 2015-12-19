@@ -35,6 +35,8 @@
             
              NSDictionary *results = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
              self.catFacts = results[@"facts"];
+             
+             [self.tableView reloadData];
         
     }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
