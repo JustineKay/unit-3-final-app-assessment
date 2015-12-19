@@ -60,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GmP-Xw-5VA"/>
                     <connections>
+                        <outlet property="backgroundView" destination="TgD-c4-rwZ" id="P6W-Fw-PgQ"/>
                         <outlet property="onwardButton" destination="LaA-n5-x5F" id="34N-Mc-gV8"/>
                     </connections>
                 </viewController>
@@ -79,23 +80,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKs-tp-NgJ">
-                                <rect key="frame" x="0.0" y="242" width="600" height="179"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKs-tp-NgJ">
+                                <rect key="frame" x="0.0" y="243" width="600" height="178"/>
                                 <color key="backgroundColor" red="0.4975257462509115" green="1" blue="0.44013376842582841" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="greenButtonTapped:" destination="Lli-Fk-jNo" eventType="touchUpInside" id="9g2-5v-JtA"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-OU-udD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-OU-udD">
                                 <rect key="frame" x="0.0" y="421" width="600" height="179"/>
                                 <color key="backgroundColor" red="0.18958257835885495" green="0.24171428057983357" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="blueButtonTapped:" destination="Lli-Fk-jNo" eventType="touchUpInside" id="xn3-HJ-2J2"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-Ef-dc3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="178.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-Ef-dc3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="179"/>
                                 <color key="backgroundColor" red="1" green="0.01027623448" blue="0.022082786569999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.010276234475419144" blue="0.022082786570011059" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="Lli-Fk-jNo" eventType="touchUpInside" id="X5G-gL-ceO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c1S-nY-gGW" firstAttribute="top" secondItem="fNY-OU-udD" secondAttribute="bottom" id="H92-No-8Sn"/>
+                            <constraint firstItem="jzl-Ef-dc3" firstAttribute="top" secondItem="Y3d-yE-s3T" secondAttribute="bottom" id="K5N-om-7Xi"/>
+                            <constraint firstItem="cKs-tp-NgJ" firstAttribute="top" secondItem="jzl-Ef-dc3" secondAttribute="bottom" id="Myx-dn-HT4"/>
+                            <constraint firstItem="cKs-tp-NgJ" firstAttribute="height" secondItem="fNY-OU-udD" secondAttribute="height" id="U9s-se-Luz"/>
+                            <constraint firstItem="cKs-tp-NgJ" firstAttribute="leading" secondItem="O1m-j3-CNb" secondAttribute="leading" id="bPp-Bh-X8N"/>
+                            <constraint firstItem="fNY-OU-udD" firstAttribute="top" secondItem="cKs-tp-NgJ" secondAttribute="bottom" id="fY0-j5-1xc"/>
+                            <constraint firstAttribute="trailing" secondItem="cKs-tp-NgJ" secondAttribute="trailing" id="kgA-Sh-Hm2"/>
+                            <constraint firstItem="jzl-Ef-dc3" firstAttribute="height" secondItem="cKs-tp-NgJ" secondAttribute="height" id="lQH-I5-o3M"/>
+                            <constraint firstAttribute="trailing" secondItem="fNY-OU-udD" secondAttribute="trailing" id="nFs-F7-9kD"/>
+                            <constraint firstAttribute="trailing" secondItem="jzl-Ef-dc3" secondAttribute="trailing" id="oIg-7B-PZC"/>
+                            <constraint firstItem="jzl-Ef-dc3" firstAttribute="leading" secondItem="O1m-j3-CNb" secondAttribute="leading" id="piV-uN-XhG"/>
+                            <constraint firstItem="fNY-OU-udD" firstAttribute="leading" secondItem="O1m-j3-CNb" secondAttribute="leading" id="wLv-HB-ywd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="blueButton" destination="fNY-OU-udD" id="osz-oX-AR3"/>
@@ -120,11 +144,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTt-7k-eCT" id="sRj-lp-QH7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VkW-6X-M00">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
