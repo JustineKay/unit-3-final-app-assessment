@@ -7,6 +7,7 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "C4QCatFactsDetailViewController.h"
 
 #define CAT_GIF_URL @"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC"
@@ -24,13 +25,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.giphyImages = [[NSMutableArray alloc] init];
+    
     [self fetchGiphyImages];
     
     self.catFactLabel.text = self.catFact;
     
-    self.giphyImages = [[NSMutableArray alloc] init];
+}
+
+- (void) setBackgroundImage: (NSString *)urlStr {
     
+    NSURL *imageURL = [NSURL URLWithString:urlStr];
     
+    [self.giphyImageView sd_setImageWithURL:imageURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.giphyImageView.image = image;
+    }];
+}
+
+- (NSString *)randomGiphyImage{
+    
+    id randomObject = [self.giphyImages objectAtIndex:arc4random()%[self.giphyImages count]];
+    
+    NSString *randomImage = randomObject;
+    
+    return randomImage;
 }
 
 - (void) fetchGiphyImages {
@@ -49,7 +68,10 @@
                  NSString *imageURLStr = result[@"images"][@"original_still"][@"url"];
                  
                  [self.giphyImages addObject:imageURLStr];
+                 
              }
+             
+             [self setBackgroundImage:[self randomGiphyImage]];
         
          }
      
